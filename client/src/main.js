@@ -5,7 +5,7 @@ const display = document.getElementById("app");
 const form = document.getElementById("form");
 
 async function fetchData() {
-  const response = await fetch(`https://deploying-and-git-1.onrender.com/messages`);
+  const response = await fetch(`https://deploying-and-git.onrender.com/messages`);
   const messages = await response.json();
 
   console.log(messages);
@@ -38,7 +38,7 @@ async function handleSubmit(event) {
   const userInput = Object.fromEntries(formData);
   const userInputJSON = JSON.stringify(userInput);
 
-  const response = await fetch(`https://deploying-and-git-1.onrender.com/messages`, {
+  const response = await fetch(`https://deploying-and-git.onrender.com/messages`, {
     headers: {
       "Content-Type": "application/json",
     },
