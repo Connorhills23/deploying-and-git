@@ -13,7 +13,7 @@ const db = new pg.Pool({
 });
 
 app.get("/", (req, res) => {
-  res.send("Hell");
+  res.send("Hello this is running");
 });
 
 app.get("/messages", async (req, res) => {
@@ -32,6 +32,6 @@ app.post("/messages", async (req, res) => {
   res.status(200).json({ message: "added message" });
 });
 
-app.listen(4242, () => {
-  console.log(`Server started on port http://localhost:4242`);
+app.listen(5050, () => {
+  console.log(`Server started on port http://localhost:5050`);
 });
